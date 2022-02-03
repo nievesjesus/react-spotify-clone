@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #b3b3b3;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+.logo {
+  width: 130px;
+  margin: 16px;  
+}
+
+
+.logo img {
+  width: 100%;  
+}
+
+.logo svg {
+  fill: white;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.spotify-container {
+  background-color: #1a1a1a;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.spotify-body-container {
+  width: calc(100% - 241px);
+  height: calc(100% - 90px);
+  padding-bottom: 110px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.left-menu {
+  width: 241px;
+  height: 100%;
+  background-color: #121212;
+  /* secondary background #1a1a1a */
+}
+
+.left-menu li {
+  margin-bottom: 10px;
+}
+
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+
+.player-controls {
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #181818ed;
+  display: flex;
+  transition: opacity 0.3s linear 0.3s;
+  opacity: 1;
+}
+
+.player-controls.hide {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.player-controls > div:not(.color-backdrop) {
+  width: 33.33%;
+  z-index: 2;
+}
+
+.album-item {
+  width: 167px;
+  padding: 16px;
+  background-color: #181818;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.album-item-cover {
+  background-color: #333;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+  position: relative;
+  width: 167px;
+  height: 167px;
+  margin-bottom: 20px;
+}
+
+.album-item-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: conver;
+}
+
+.album-item-title {
+  color: #fff;
+  margin-bottom: 10px;
+
+}
+
+.album-item-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+    color: var(#a7a7a7, #575757);
+}
+
+.album-items-section-all {
+  display: flex;
+  overflow-x: scroll;
+}
+
+
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  height: 5px;
+  -webkit-appearance: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #3b7677;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.audio-player {
+  max-width: 350px;
+  margin: auto;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 10px auto 15px;
+}
+
+
+.audio-controls .prev svg,
+.audio-controls .next svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.audio-controls .play svg,
+.audio-controls .pause svg {
+  height: 26px;
+  width: 26px;
+  fill: white;
+}
+
+.audio-controls path {
+  fill: var(--white);
+}
+
+.color-backdrop {
+  background: linear-gradient(45deg, var(--active-color) 20%, transparent 100%)
+    no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.color-backdrop.playing {
+  animation: colorChange 20s alternate infinite;
+}
+
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+table.playlist-table {
+  width: 100%;
+  margin: 16px;
+}
+
+.playlist-header {
+  text-align: left;
+}
+
+.playlist-artwork {
+  width: 44px;
+  height: 44px;
+}
+
+.playlist-song-name {
+  color: white;
+}
+
+.idle {
+  background: transparent;
+}
+
+.player-details {
+  display: flex;
+  padding: 16px;
+}
+
+img.artwork-control-bar {
+  width: 64px;
+  height: 64px;
+}
+
+.song-details {
+  margin-left: 15px;
+}
+
+.home-container {
+  padding: 16px;
+}
+
+.album-items-section-title {
+  color: white;
+  font-size: 1.3rem;
+}
+
+p.album-items-section-description {
+  margin-top: -20px;
+}
+
+.playlist-container {
+  padding: 16px;
+}
+
+.menu-playlists {
+  border-top: 1px solid rgba(193, 193, 193, 0.3);
+  margin: 16px;
+}
+
+.main-menu {
+  margin: 16px;
+}
