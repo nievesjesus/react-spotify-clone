@@ -3,8 +3,7 @@ import stay from "../components/assets/audios/stay.mp3";
 import easy from "../components/assets/audios/easy.mp3";
 import universe from "../components/assets/audios/universe.mp3";
 
-// All of these artists are at https://pixabay.com/music/search/mood/laid%20back/
-export default [
+const tracks =  [
   {
     title: "Watermelon Sugar",
     artist: "Harry Styles",
@@ -38,3 +37,6 @@ export default [
     color: "#ff8a65"
   },  
 ];
+
+
+export default tracks;
