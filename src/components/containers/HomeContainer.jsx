@@ -9,7 +9,6 @@ const HomeContainer = () => {
 
     useEffect(() => {
         getAllAlbums().then(albums => {
-            console.log(albums)
             setAlbums(albums)
         })
     }, []);

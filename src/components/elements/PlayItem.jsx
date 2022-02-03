@@ -6,7 +6,6 @@ const PlayItem = ({ track, index }) => {
     const { playSongOnClick } = useContext(PlayerContext);
     const audioRef = useRef(new Audio(audioSrc));
     const { duration } = audioRef.current;
-    console.log(audioRef)
 
     const convertToMinutes = (time) => {
         var minutes = Math.floor( time / 60 );
